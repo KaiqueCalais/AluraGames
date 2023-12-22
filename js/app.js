@@ -10,9 +10,5 @@ function alterarStatus(indice) {
 
     listaDeBotoes[indice - 1].classList.toggle('dashboard__item__button--return');
 
-    if (listaDeBotoes[indice - 1].textContent == 'Alugar') {
-        listaDeBotoes[indice - 1].textContent = 'Devolver';
-    } else {
-        listaDeBotoes[indice - 1].textContent = 'Alugar'
-    }
+    listaDeBotoes[indice - 1].textContent = imagensDosJogos[indice - 1].classList.contains('dashboard__item__img--rented') ? 'Devolver': 'Alugar';
 };
